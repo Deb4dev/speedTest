@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height : 100vh;
+    margin: 0;
+    background-color:rgb(222, 221, 234);
+}
+
+body , .quoteinput .speed-out{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.container{
+    background-color: rgb(194, 194, 133);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 700px;
+    max-width: 90%;
+    box-shadow: .2rem .6rem rgb(212, 124, 124);
+}
+
+.timer{
+    position:absolute;
+    top: 2rem;
+    font-size: 3rem;
+    color: yellow;
+    font-weight: bold;
+    
+}
+.quote{
+    margin-bottom: 1rem;
+    margin-left: calc(1rem +.2rem);
+    margin-right: calc(1rem +.2rem);
+}
+.qouteinput{
+    background-color: transparent;
+    border: .2rem solid black;
+    height: 10rem;
+    width: 100%;
+    outline: none;
+    margin: auto;
+    resize: none;
+    font-size: 1rem;
+    border-radius: .5rem;
+
+}
+
+.qouteinput:focus{
+    border-color: black;
+}
+
+.correct{
+    color:green;
+}
+
+.incorrect{
+    color:red;
+    text-decoration: underline;
+}
+button.continueBtn{
+    
+    background-color: #00ff4c; 
+    color: white; 
+    height: 10%;
+    width: auto;
+    
+}
+.speed-out{
+    font-weight: bold;
+    font-size: 2rem;
+    
+}
