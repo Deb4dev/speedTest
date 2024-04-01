@@ -29,11 +29,11 @@ quoteInputElement.addEventListener('input', () => {
         let TypeSpeed = Math.floor(((arrValue.length)/5)/(timerValue/60))
         console.log(Math.floor(TypeSpeed))
         const createDiv = document.createElement('div')
-        createDiv.innerText = TypeSpeed
+        createDiv.innerText = `${TypeSpeed}W.P.M.`
         document.body.appendChild(createDiv)
         createDiv.classList.add('speed-out')
         //document.write(TypeSpeed)
-        let contiFlag = true
+        //let contiFlag = true
         //create a continue button
         const  createButton = document.createElement('button')
         createButton.innerText = "continue"
@@ -44,7 +44,12 @@ quoteInputElement.addEventListener('input', () => {
         document.body.appendChild(createButton)
         createButton.classList.add('continueBtn')
     }
-    //if(correct) renderNewQoute()s
+    //if(correct) renderNewQoute()
+    if(correct){
+        const textarea = document.querySelector('textarea')
+        textarea.classList.add('textStop')
+        textarea.setAttribute('readonly','readonly')
+    }
 })
 function getRandomeQoute(){
     return fetch(RANDOM_QUOTE_API_URL)
